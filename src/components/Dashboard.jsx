@@ -91,11 +91,15 @@ const Dashboard = () => {
 
       <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 'var(--space-8)' }}>
         {/* Progress Timeline Block */}
-        <div className="glass-panel" style={{ padding: 'var(--space-8)', borderRadius: 'var(--radius-lg)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-6)' }}>
-            <h2 style={{ fontSize: '1.25rem' }}>{stats.currentPhase}</h2>
-            <span style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Live Feed</span>
-          </div>
+          <div className="glass-panel" style={{ padding: 'var(--space-8)', borderRadius: 'var(--radius-lg)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-6)' }}>
+              <h2 style={{ fontSize: '1.25rem' }}>{stats.currentPhase}</h2>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
+                <div className="pulse-dot" style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--color-primary)' }}></div>
+                <span style={{ color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.875rem' }}>Live Feed</span>
+              </div>
+            </div>
+
           
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
             <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>
