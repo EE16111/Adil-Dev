@@ -6,7 +6,8 @@ import {
   CheckSquare, 
   Calendar, 
   Settings,
-  Building2
+  Building2,
+  Share2
 } from 'lucide-react';
 import '../styles/global.css';
 

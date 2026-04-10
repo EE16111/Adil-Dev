@@ -2,7 +2,10 @@ rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
     match /{allPaths=**} {
-      allow read, write: if true;
+      // Only authenticated users can read or write documents
+      allow read, write: if request.auth != null 
+                         && request.resource.size < 50 * 1024 * 1024; // 50MB Limit
     }
   }
 }
+
