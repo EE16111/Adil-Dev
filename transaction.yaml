@@ -1,0 +1,23 @@
+---
+additions:
+- kind: dns#resourceRecordSet
+  name: ealingexchange.co.uk.
+  rrdatas:
+  - ns-cloud-a1.googledomains.com. cloud-dns-hostmaster.google.com. 4 21600 3600 259200
+    300
+  ttl: 21600
+  type: SOA
+- kind: dns#resourceRecordSet
+  name: _dmarc.ealingexchange.co.uk.
+  rrdatas:
+  - '"v=DMARC1; p=quarantine; pct=100; rua=mailto:info@ealingexchange.co.uk"'
+  ttl: 3600
+  type: TXT
+deletions:
+- kind: dns#resourceRecordSet
+  name: ealingexchange.co.uk.
+  rrdatas:
+  - ns-cloud-a1.googledomains.com. cloud-dns-hostmaster.google.com. 3 21600 3600 259200
+    300
+  ttl: 21600
+  type: SOA
